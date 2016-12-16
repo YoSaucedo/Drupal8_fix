@@ -1,4 +1,4 @@
- dpkg-buildpackage -rfakeroot -D -us -uc
+ dpkg-buildpackage -rfakeroot -us -uc --hook-check=cd ..;  --check-command=lintian
 dpkg-buildpackage: warning: using a gain-root-command while being root
 dpkg-buildpackage: info: source package drupal8
 dpkg-buildpackage: info: source version 8.2.2-1
@@ -17,8 +17,8 @@ dpkg-source: info: using source format '3.0 (quilt)'
 dpkg-source: info: building drupal8 using existing ./drupal8_8.2.2.orig.tar.gz
 dpkg-source: warning: ignoring deletion of file core/modules/system/tests/fixtures/HtaccessTest/access_test.module.orig, use --include-removal to override
 dpkg-source: warning: ignoring deletion of file core/modules/system/tests/fixtures/HtaccessTest/access_test.php.orig, use --include-removal to override
-dpkg-source: warning: ignoring deletion of file core/modules/system/tests/fixtures/HtaccessTest/access_test.module.bak, use --include-removal to override
 dpkg-source: warning: ignoring deletion of file core/modules/system/tests/fixtures/HtaccessTest/access_test.php.bak, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file core/modules/system/tests/fixtures/HtaccessTest/access_test.module.bak, use --include-removal to override
 dpkg-source: info: building drupal8 in drupal8_8.2.2-1.debian.tar.xz
 dpkg-source: info: building drupal8 in drupal8_8.2.2-1.dsc
  debian/rules build
@@ -34,12 +34,12 @@ dh  binary
    dh_testroot
    dh_prep
    debian/rules override_dh_installdirs
-make[1]: Entering directory '/var/drupal/drupal8_deb/drupal8'
+make[1]: Entering directory '/var/drupal/Drupal8_fix/drupal8_deb/drupal8'
 dh_installdirs -X.svn -XCVS
-make[1]: Leaving directory '/var/drupal/drupal8_deb/drupal8'
+make[1]: Leaving directory '/var/drupal/Drupal8_fix/drupal8_deb/drupal8'
    dh_auto_install
    debian/rules override_dh_install
-make[1]: Entering directory '/var/drupal/drupal8_deb/drupal8'
+make[1]: Entering directory '/var/drupal/Drupal8_fix/drupal8_deb/drupal8'
 # Ensure the list of third-party included libraries remains
 # consistent with what we already checked
 SHATMP=`mktemp --tmpdir SHA_CK.XXXXX` && \
@@ -50,13 +50,13 @@ dh_install -XCVS -X.svn -X.gitignore -X.gitattributes -X.gitmodules
 # Fix permissions
 #
 # Images should not be executable
-find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8 \
+find /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8 \
   -name '*.png' -o -name '*.jpg' -exec chmod a-x \{\} +
 # All actual scripts (*.sh, *.php) under core/scripts should
 # be executable; no other files in core/ should be executable.
-find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core -type f -exec chmod a-x \{\} +
-find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/scripts -type f -name '*.php' -exec chmod a+x \{\} +
-find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/scripts -type f -name '*.sh' -exec chmod a+x \{\} +
+find /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core -type f -exec chmod a-x \{\} +
+find /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/scripts -type f -name '*.php' -exec chmod a+x \{\} +
+find /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/scripts -type f -name '*.sh' -exec chmod a+x \{\} +
 # There are many unneeded extra license files shipped with
 # Drupal, identical copies of the GPL (or, in two cases, an
 # empty file, and in two further cases documented in
@@ -64,24 +64,24 @@ find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/scrip
 # (shipped in the sources inside debian/) has also several
 # copies of the MIT and BSD licenses. Getting rid of them
 # keeps Lintian happy.
-find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8 -name LICENSE.txt -exec rm \{\} +
-find /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/vendor -name LICENSE* -exec rm \{\} +
-rm /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/ckeditor/LICENSE.md \
-	/var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/classList/LICENSE.md \
-	/var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/misc/icons/license.md \
-	/var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/themes/stable/images/core/icons/license.md
+find /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8 -name LICENSE.txt -exec rm \{\} +
+find /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/vendor -name LICENSE* -exec rm \{\} +
+rm /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/ckeditor/LICENSE.md \
+	/var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/classList/LICENSE.md \
+	/var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/misc/icons/license.md \
+	/var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/themes/stable/images/core/icons/license.md
 # Replace those embedded javascript libraries we can with the
 # packaged systemwide version. Also, provided in
 # drupal8.links; binary package dependencies provided.
-rm -rf /var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/ckeditor \
-	/var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/jquery.cookie \
-	/var/drupal/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/underscore
+rm -rf /var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/ckeditor \
+	/var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/jquery.cookie \
+	/var/drupal/Drupal8_fix/drupal8_deb/drupal8/debian/drupal8/usr/share/drupal8/core/assets/vendor/underscore
 install -m640 .htaccess debian/drupal8/etc/drupal/8/htaccess
-make[1]: Leaving directory '/var/drupal/drupal8_deb/drupal8'
+make[1]: Leaving directory '/var/drupal/Drupal8_fix/drupal8_deb/drupal8'
    debian/rules override_dh_installdocs
-make[1]: Entering directory '/var/drupal/drupal8_deb/drupal8'
+make[1]: Entering directory '/var/drupal/Drupal8_fix/drupal8_deb/drupal8'
 dh_installdocs -XCVS -X.svn
-make[1]: Leaving directory '/var/drupal/drupal8_deb/drupal8'
+make[1]: Leaving directory '/var/drupal/Drupal8_fix/drupal8_deb/drupal8'
    dh_installchangelogs
    dh_installexamples
    dh_installcron
@@ -97,16 +97,18 @@ make[1]: Leaving directory '/var/drupal/drupal8_deb/drupal8'
    dh_md5sums
    dh_builddeb
 dpkg-deb: building package 'drupal8' in '../drupal8_8.2.2-1_all.deb'.
+ dpkg-genbuildinfo
  dpkg-genchanges  >../drupal8_8.2.2-1_amd64.changes
 dpkg-genchanges: info: including full source code in upload
  dpkg-source --after-build drupal8
 dpkg-source: info: unapplying fix_interpreter_path
+ cd ..; 
 dpkg-buildpackage: info: full upload (original source is included)
-Now running lintian...
+dpkg-buildpackage: info: running hook check
+ lintian ../drupal8_8.2.2-1_amd64.changes
 warning: the authors of lintian do not recommend running it with root privileges!
 W: drupal8: apache2-reverse-dependency-calls-wrapper-script postinst a2enconf
 W: drupal8: apache2-reverse-dependency-calls-wrapper-script postinst a2enconf
 W: drupal8: apache2-reverse-dependency-calls-wrapper-script postinst a2enmod
 W: drupal8: apache2-reverse-dependency-calls-wrapper-script postinst a2enmod
 N: 40 tags overridden (35 errors, 5 warnings)
-Finished running lintian.

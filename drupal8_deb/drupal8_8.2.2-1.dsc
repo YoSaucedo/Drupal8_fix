@@ -13,10 +13,10 @@ Package-List:
  drupal8 deb web extra arch=all
 Checksums-Sha1:
  4343b5cabbbf2f0916b3080e0cd1592b3bf77b4d 10333694 drupal8_8.2.2.orig.tar.gz
- e2bf663bf20061062fb17324aa364e913c830077 1683176 drupal8_8.2.2-1.debian.tar.xz
+ c2aa0151d49abf3ac9d5a0ef5dc961a8ad15ba5e 1677404 drupal8_8.2.2-1.debian.tar.xz
 Checksums-Sha256:
  ca3ee1c7589408f62a98950a905773ee2f0cb1dfa7864abea59b60ea68bcda91 10333694 drupal8_8.2.2.orig.tar.gz
- bcbd40c75e020c5ce64987ef1ccf7277e5d3a8286e64afef8d98208425ee9a54 1683176 drupal8_8.2.2-1.debian.tar.xz
+ 1049779b8e7b945626554e38c9a7bc7f1c94585d1257df7c4d11c0a9d50c9d09 1677404 drupal8_8.2.2-1.debian.tar.xz
 Files:
  508381e1dce284e4b5ad42b23f337932 10333694 drupal8_8.2.2.orig.tar.gz
- d886f5576633e3dc1d41a66e34cb255e 1683176 drupal8_8.2.2-1.debian.tar.xz
+ de325ff6d033b154a7cdf64dd8e6957a 1677404 drupal8_8.2.2-1.debian.tar.xz
