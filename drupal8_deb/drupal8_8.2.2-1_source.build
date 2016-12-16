@@ -1,0 +1,32 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -i -I -nc -S
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: info: source package drupal8
+dpkg-buildpackage: info: source version 8.2.2-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Gunnar Wolf <gwolf@debian.org>
+ dpkg-source -i -I --before-build drupal8
+dpkg-source: info: applying fix_interpreter_path
+dpkg-buildpackage: warning: building a source package without cleaning up as you asked; it might contain undesired files
+ dpkg-source -i -I -b drupal8
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building drupal8 using existing ./drupal8_8.2.2.orig.tar.gz
+dpkg-source: info: building drupal8 in drupal8_8.2.2-1.debian.tar.xz
+dpkg-source: info: building drupal8 in drupal8_8.2.2-1.dsc
+ dpkg-genchanges --build=source >../drupal8_8.2.2-1_source.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source -i -I --after-build drupal8
+dpkg-source: info: unapplying fix_interpreter_path
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian...
+warning: the authors of lintian do not recommend running it with root privileges!
+N: 19 tags overridden (19 errors)
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile drupal8_8.2.2-1.dsc Gunnar Wolf <gwolf@debian.org>
+gpg: directory '/root/.gnupg' created
+gpg: new configuration file '/root/.gnupg/dirmngr.conf' created
+gpg: new configuration file '/root/.gnupg/gpg.conf' created
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+gpg: skipped "Gunnar Wolf <gwolf@debian.org>": No secret key
+gpg: /tmp/debsign.tOhJown2/drupal8_8.2.2-1.dsc: clearsign failed: No secret key
+debsign: gpg error occurred!  Aborting....

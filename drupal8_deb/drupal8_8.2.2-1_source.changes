@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Fri,  7 Oct 2016 11:06:53 -0500
+Source: drupal8
+Binary: drupal8
+Architecture: source
+Version: 8.2.2-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Gunnar Wolf <gwolf@debian.org>
+Changed-By: Gunnar Wolf <gwolf@debian.org>
+Description:
+ drupal8    - fully-featured content management framework
+Closes: 756305
+Changes:
+ drupal8 (8.2.2-1) UNRELEASED; urgency=low
+ .
+   * New Debian package (Closes: #756305)
+Checksums-Sha1:
+ a05fef652192d56a84beff00733d3c3dcfa95c02 948 drupal8_8.2.2-1.dsc
+ 4343b5cabbbf2f0916b3080e0cd1592b3bf77b4d 10333694 drupal8_8.2.2.orig.tar.gz
+ 927b868e3f25e924292c3dc8415b59268c500d07 1683052 drupal8_8.2.2-1.debian.tar.xz
+Checksums-Sha256:
+ 3946ac8852560a7ad2c69ed61ca829adbb3822710fbb60c8dd127a7744612abf 948 drupal8_8.2.2-1.dsc
+ ca3ee1c7589408f62a98950a905773ee2f0cb1dfa7864abea59b60ea68bcda91 10333694 drupal8_8.2.2.orig.tar.gz
+ 7d8ab85002c9877418f6f1e42fd78ccfd55411c329a926eb990c2714b2de444a 1683052 drupal8_8.2.2-1.debian.tar.xz
+Files:
+ 799b69f6270156038cfa9ecf03706f81 948 web extra drupal8_8.2.2-1.dsc
+ 508381e1dce284e4b5ad42b23f337932 10333694 web extra drupal8_8.2.2.orig.tar.gz
+ 3688d1cf545c4ec9ab33cf665bc505c3 1683052 web extra drupal8_8.2.2-1.debian.tar.xz
