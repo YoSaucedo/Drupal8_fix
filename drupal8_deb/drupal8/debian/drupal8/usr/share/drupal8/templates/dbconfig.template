@@ -39,11 +39,7 @@ $dbs['pgsql'] = array(
 
 );
 
-$dbs['sqlite'] = array(
-                      'driver' => 'sqlite',
-                      'database' => '_DBC_BASEPATH_/_DBC_DBNAME_',
-  		      'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite'
-);
+$dbs['sqlite'] = array();
 
 $databases['default']['default'] = $dbs['_DBC_DBTYPE_'];
 
