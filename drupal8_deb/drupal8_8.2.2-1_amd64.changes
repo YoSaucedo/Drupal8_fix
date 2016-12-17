@@ -16,20 +16,20 @@ Changes:
  .
    * New Debian package (Closes: #756305)
 Checksums-Sha1:
- 7f3262e156bfb4e19a1bcf1e99d27c4e41029315 948 drupal8_8.2.2-1.dsc
+ 19b8882426b58aac1f3c7aa04931902d2a4339ef 948 drupal8_8.2.2-1.dsc
  4343b5cabbbf2f0916b3080e0cd1592b3bf77b4d 10333694 drupal8_8.2.2.orig.tar.gz
- 601562fdf1353ea248b999c07d495a541c029a3d 1677548 drupal8_8.2.2-1.debian.tar.xz
- 2c2f5a5c9255e44c2afd6ae533731e380f71cce7 8439064 drupal8_8.2.2-1_all.deb
- 795808bcaf81a2bc81a6d1f45cc749ce504ff4c1 4297 drupal8_8.2.2-1_amd64.buildinfo
+ 8e8fd406e987bd79a836b59a5f61d80fc3a2d6c9 1677440 drupal8_8.2.2-1.debian.tar.xz
+ 6569ec7fd98ff0a5dd21e80813b50c3e86e468a6 8439168 drupal8_8.2.2-1_all.deb
+ 846cfafab3ad783cb0f8fc89d4299dde0e927f47 4297 drupal8_8.2.2-1_amd64.buildinfo
 Checksums-Sha256:
- 08a5f92748b1d998030b2aa38cc11239e357e79f41481b1495f60f6aa0c202f2 948 drupal8_8.2.2-1.dsc
+ 031ef80a1ec52c8e52a1e2a68331b5050445bd909fdf6c1c105c2324ff150220 948 drupal8_8.2.2-1.dsc
  ca3ee1c7589408f62a98950a905773ee2f0cb1dfa7864abea59b60ea68bcda91 10333694 drupal8_8.2.2.orig.tar.gz
- be7f55f8599476c723c459bc7b97444201aa8355139a4a91ac460c208956f8dd 1677548 drupal8_8.2.2-1.debian.tar.xz
- 8c661cd9f12346c0a34ca051d361f6e29cbbc53f856638151aed8fc2895c3da4 8439064 drupal8_8.2.2-1_all.deb
- c5146826af30cc9a041ec0a3e0dbc515ce7024561e45dbcdbee6be3bfbdac16e 4297 drupal8_8.2.2-1_amd64.buildinfo
+ 9485842a5456c8ddb43d3d2e3be4ec20ac6662196bba2eea3ef59264c13f75ac 1677440 drupal8_8.2.2-1.debian.tar.xz
+ 22dd4a3aa03097de8312ccb13290136bea9ac8227fa8ad565cfcaab8e430dbc2 8439168 drupal8_8.2.2-1_all.deb
+ 5c4ae5092d1059b216be4ac287a87d39f84980337ad5bb3cd70ef37bc50558c5 4297 drupal8_8.2.2-1_amd64.buildinfo
 Files:
- 9426122261df5c893e90b2c1af75cd37 948 web extra drupal8_8.2.2-1.dsc
+ 86c02cec5b3f91f215097403fad9f213 948 web extra drupal8_8.2.2-1.dsc
  508381e1dce284e4b5ad42b23f337932 10333694 web extra drupal8_8.2.2.orig.tar.gz
- c51b944371881a7505b20dd3def94ca1 1677548 web extra drupal8_8.2.2-1.debian.tar.xz
- a5ea9c4080be990f5e672625a0e8af24 8439064 web extra drupal8_8.2.2-1_all.deb
- 88d193725dcd07c63d71cb17cb74b956 4297 web extra drupal8_8.2.2-1_amd64.buildinfo
+ a8dcb7fcd56681937f252c342c0067d8 1677440 web extra drupal8_8.2.2-1.debian.tar.xz
+ 5fb202d43727bb153e29c7a1dc429e52 8439168 web extra drupal8_8.2.2-1_all.deb
+ 1d92a32db672b02b5ffdcee2964b9223 4297 web extra drupal8_8.2.2-1_amd64.buildinfo
