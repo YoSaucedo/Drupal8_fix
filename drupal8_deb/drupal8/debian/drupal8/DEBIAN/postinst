@@ -62,5 +62,21 @@ cd /usr/share/drupal8/sites/default/
 chown www-data:www-data settings.php 
 echo -e "\n\nTo finish please execute: service apache2 restart\n"
 echo "Open the url of your server adding /drupal8/core/install.php to start the script"
-sudo -u postgres -H -- psql -d drupal8 -c "ALTER DATABASE \"drupal8\" SET bytea_output='escape'"
+
+SERVICE='postgresql'
+																	 
+if ps ax | grep -v grep | grep $SERVICE > /dev/null
+then
+	value=$( sudo -u postgres -H -- psql -l | grep drupal8 | wc -l )
+	if [ $value -eq 1 ]
+	then
+		sudo -u postgres -H -- psql -d drupal8 -c "ALTER DATABASE \"drupal8\" SET bytea_output='escape'"
+	else
+		echo "Database drupal8 is not found"
+	fi
+
+	else
+		echo "$SERVICE is not running"	 
+	fi
+
 exit 0
