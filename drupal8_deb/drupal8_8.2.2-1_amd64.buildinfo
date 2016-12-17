@@ -4,17 +4,17 @@ Binary: drupal8
 Architecture: all source
 Version: 8.2.2-1
 Checksums-Md5:
- 9426122261df5c893e90b2c1af75cd37 948 drupal8_8.2.2-1.dsc
- a5ea9c4080be990f5e672625a0e8af24 8439064 drupal8_8.2.2-1_all.deb
+ 86c02cec5b3f91f215097403fad9f213 948 drupal8_8.2.2-1.dsc
+ 5fb202d43727bb153e29c7a1dc429e52 8439168 drupal8_8.2.2-1_all.deb
 Checksums-Sha1:
- 7f3262e156bfb4e19a1bcf1e99d27c4e41029315 948 drupal8_8.2.2-1.dsc
- 2c2f5a5c9255e44c2afd6ae533731e380f71cce7 8439064 drupal8_8.2.2-1_all.deb
+ 19b8882426b58aac1f3c7aa04931902d2a4339ef 948 drupal8_8.2.2-1.dsc
+ 6569ec7fd98ff0a5dd21e80813b50c3e86e468a6 8439168 drupal8_8.2.2-1_all.deb
 Checksums-Sha256:
- 08a5f92748b1d998030b2aa38cc11239e357e79f41481b1495f60f6aa0c202f2 948 drupal8_8.2.2-1.dsc
- 8c661cd9f12346c0a34ca051d361f6e29cbbc53f856638151aed8fc2895c3da4 8439064 drupal8_8.2.2-1_all.deb
+ 031ef80a1ec52c8e52a1e2a68331b5050445bd909fdf6c1c105c2324ff150220 948 drupal8_8.2.2-1.dsc
+ 22dd4a3aa03097de8312ccb13290136bea9ac8227fa8ad565cfcaab8e430dbc2 8439168 drupal8_8.2.2-1_all.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sat, 17 Dec 2016 02:32:12 +0000
+Build-Date: Sat, 17 Dec 2016 04:02:14 +0000
 Installed-Build-Depends:
  autoconf (= 2.69-10),
  automake (= 1:1.15-5),

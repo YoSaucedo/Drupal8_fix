@@ -39,7 +39,10 @@ $dbs['pgsql'] = array(
 
 );
 
-$dbs['sqlite'] = array();
+$dbs['sqlite3'] = array(
+		      'driver' => 'sqlite',
+		      'database' => 'sites/default/files/.ht.sqlite',
+);
 
 $databases['default']['default'] = $dbs['_DBC_DBTYPE_'];
 
